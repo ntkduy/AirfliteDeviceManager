@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ntkduy1604.airflitedevicemanager.MainActivity">
+
+    <TextView
+        android:id="@+id/category_device_list_text_view"
+        style="@style/CategoryStyle"
+        android:background="@color/category_device_list"
+        android:text="@string/category_list_of_device" />
+
+    <TextView
+        android:id="@+id/category_scan_nfc_text_view"
+        style="@style/CategoryStyle"
+        android:background="@color/device_scan_nfc"
+        android:text="@string/category_scan_nfc" />
+
+    <TextView
+        android:id="@+id/category_scan_barcode_text_view"
+        style="@style/CategoryStyle"
+        android:background="@color/device_scan_barcode"
+        android:text="@string/category_scan_barcode" />
+
+</LinearLayout>

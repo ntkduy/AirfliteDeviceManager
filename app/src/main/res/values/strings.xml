@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Airflite Device Manager</string>
+
+    <!-- Category name for the first meal type [CHAR LIMIT=20] -->
+    <string name="category_list_of_device">Device List</string>
+    <string name="category_scan_nfc">NFC Scan</string>
+    <string name="category_scan_barcode">Barcode Scan</string>
+
+    <!-- Device item -->
+    <string name="device_id">ID: </string>
+    <string name="device_name">Name: </string>
+    <string name="device_serial_no">Serial No.: </string>
+    <string name="device_activate_date">Activate Date: </string>
+    <string name="device_user_id">User ID: </string>
+    <string name="device_com_id">Com ID: </string>
+    <string name="device_model">Model: </string>
+    <string name="device_tag_id">Tag ID: </string>
+
+
+</resources>
