@@ -22,9 +22,23 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String message = "Open the list of " + getString(R.string.category_list_of_device);
                 Toast.makeText(view.getContext(),message, Toast.LENGTH_SHORT).show();
-                Intent getDeviceList = new Intent(MainActivity.this, CategoryDeviceList.class);
-                startActivity(getDeviceList);
+                Intent getDeviceListIntent = new Intent(MainActivity.this, CategoryDeviceList.class);
+                startActivity(getDeviceListIntent);
             }
         });
+
+        //Find the JSON GET View
+        TextView scan_nfc = (TextView) findViewById(R.id.category_scan_nfc_text_view);
+        scan_nfc.setOnClickListener(new View.OnClickListener(){
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                String message = "Open the list of " + getString(R.string.category_scan_nfc);
+                Toast.makeText(view.getContext(),message, Toast.LENGTH_SHORT).show();
+                Intent scanNfcIntent = new Intent(MainActivity.this, CategoryNfcReader.class);
+                startActivity(scanNfcIntent);
+            }
+        });
+
     }
 }

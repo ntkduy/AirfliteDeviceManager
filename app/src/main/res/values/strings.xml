@@ -2,19 +2,42 @@
     <string name="app_name">Airflite Device Manager</string>
 
     <!-- Category name for the first meal type [CHAR LIMIT=20] -->
-    <string name="category_list_of_device">Device List</string>
-    <string name="category_scan_nfc">NFC Scan</string>
-    <string name="category_scan_barcode">Barcode Scan</string>
+    <string name="category_list_of_device"> Device List</string>
+    <string name="category_scan_nfc">       NFC Scan</string>
+    <string name="category_scan_barcode">   Barcode Scan</string>
 
     <!-- Device item -->
-    <string name="device_id">ID: </string>
-    <string name="device_name">Name: </string>
-    <string name="device_serial_no">Serial No.: </string>
+    <string name="device_tag_id">       Tag ID: </string>
+    <string name="device_name">         Name: </string>
+    <string name="device_model">        Model: </string>
+    <string name="device_serial_no">    Serial No.: </string>
     <string name="device_activate_date">Activate Date: </string>
-    <string name="device_user_id">User ID: </string>
-    <string name="device_com_id">Com ID: </string>
-    <string name="device_model">Model: </string>
-    <string name="device_tag_id">Tag ID: </string>
+    <string name="device_user_id">      User ID: </string>
+    <string name="device_com_id">       Com ID: </string>
+    <string name="device_id">           ID: </string>
+
+
+    <!-- NFC Strings -->
+    <string name="intro_message">   This is a simple app to read NFC data</string>
+    <string name="instruction">     Please put your RFID, NFC cards to start</string>
+    <string name="contact_detail">  q.phung@ecu.edu.au</string>
+
+    <string name="error">           Error</string>
+    <string name="no_nfc">          No NFC found on this device</string>
+    <string name="nfc_enable">      NFC is ready</string>
+    <string name="nfc_disabled">    NFC is disabled!</string>
+
+    <string name="nfc_scanned_tag_id">      Tag ID (HEX):</string>
+    <string name="nfc_scanned_name">        Device Name:</string>
+    <string name="nfc_scanned_model">       Device Model:</string>
+    <string name="nfc_scanned_serial_no">   Device Serial:</string>
+    <string name="nfc_scanned_active_date"> Active Date:</string>
+
+    <string name="nfc_scanned_tag_id_tv_default">       0 </string>
+    <string name="nfc_scanned_name_tv_default">         0 </string>
+    <string name="nfc_scanned_model_tv_default">        0 </string>
+    <string name="nfc_scanned_serial_no_tv_default">    0 </string>
+    <string name="nfc_scanned_activate_date_tv_default">0 </string>
 
 
 </resources>

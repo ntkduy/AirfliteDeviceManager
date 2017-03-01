@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ntkduy1604.airflitedevicemanager">
-
     // Add the INTERNET Permission
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -21,7 +20,14 @@
         </activity>
         <activity
             android:name=".CategoryDeviceList"
-            android:label="@string/category_list_of_device"></activity>
+            android:label="@string/category_list_of_device" />
+        <activity android:name=".CategoryNfcReader">
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
