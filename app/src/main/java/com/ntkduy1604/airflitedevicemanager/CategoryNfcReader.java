@@ -86,6 +86,17 @@ public class CategoryNfcReader extends AppCompatActivity {
             }
         });
 
+        Button updateButton = (Button) findViewById(R.id.content_device_update);
+        updateButton.setOnClickListener(new View.OnClickListener(){
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                TextView tagId = (TextView) findViewById(R.id.nfc_scanned_tag_id_tv);
+                String nfcTagId = tagId.getText().toString();
+                new deleteDevice().execute(nfcTagId);
+            }
+        });
+
         Button deleteButton = (Button) findViewById(R.id.content_device_delete);
         deleteButton.setOnClickListener(new View.OnClickListener(){
             // The code in this method will be executed when the numbers View is clicked on.
@@ -124,7 +135,7 @@ public class CategoryNfcReader extends AppCompatActivity {
         }
     }
 
-    private class getDeviceStatus extends AsyncTask<String, Void, Void> {
+    private class getDeviceStatus extends AsyncTask <String, Void, Void> {
         String nfcId, nfcName, nfcModel, nfcSerial, nfcTagId, nfcActiveDate;
 
         @Override
@@ -183,7 +194,7 @@ public class CategoryNfcReader extends AppCompatActivity {
         }
     }
 
-    private class addNewDevice extends AsyncTask<String, Void, JSONObject> {
+    private class addNewDevice extends AsyncTask <String, Void, JSONObject> {
         JsonParser jsonParser = new JsonParser();
 
         @Override
@@ -216,7 +227,7 @@ public class CategoryNfcReader extends AppCompatActivity {
         }
     }
 
-    private class deleteDevice extends AsyncTask<String, Void, JSONObject> {
+    private class deleteDevice extends AsyncTask <String, Void, JSONObject> {
         JsonParser jsonParser = new JsonParser();
 
         @Override

@@ -100,14 +100,14 @@
                 android:text="@string/button_function_commit"/>
 
             <Button
-                android:id="@+id/content_device_edit"
+                android:id="@+id/content_device_update"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 style="?android:buttonBarButtonStyle"
-                android:text="@string/button_function_delete"/>
+                android:text="@string/button_function_update"/>
 
             <Button
                 android:id="@+id/content_device_delete"

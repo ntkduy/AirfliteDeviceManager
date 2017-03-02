@@ -34,7 +34,7 @@
 
     <string name="button_function_add">ADD</string>
     <string name="button_function_commit">COMMIT</string>
-    <string name="button_function_edit">EDIT</string>
+    <string name="button_function_update">UPDATE</string>
     <string name="button_function_delete">DELETE</string>
 
     <string name="button_hint">type in please</string>
