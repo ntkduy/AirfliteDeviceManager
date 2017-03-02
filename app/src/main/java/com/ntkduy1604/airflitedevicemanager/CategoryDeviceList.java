@@ -39,9 +39,7 @@ public class CategoryDeviceList extends AppCompatActivity {
         private static final String LOGIN_URL = "https://tadac.com.au/airflite/api1/1/devices";
 
         @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
+        protected void onPreExecute() { super.onPreExecute(); }
 
         @Override
         protected Void doInBackground(Void... arg0) {
@@ -53,14 +51,10 @@ public class CategoryDeviceList extends AppCompatActivity {
 
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
-                    temp = jsonObject.getString("id");
-                    mId = temp;
-                    temp = jsonObject.getString("name");
-                    mName = temp;
-                    temp = jsonObject.getString("serialno");
-                    mSerialno = temp;
-                    temp = jsonObject.getString("activedate");
-                    mActivedate = temp;
+                    temp = jsonObject.getString("id"); mId = temp;
+                    temp = jsonObject.getString("name"); mName = temp;
+                    temp = jsonObject.getString("serialno"); mSerialno = temp;
+                    temp = jsonObject.getString("activedate"); mActivedate = temp;
 //                        temp = jsonObject.getString("userid");         mUserid = temp;
 //                        temp = jsonObject.getString("comid");           mComid = temp;
 //                        temp = jsonObject.getString("model");           mModel = temp;
@@ -86,6 +80,5 @@ public class CategoryDeviceList extends AppCompatActivity {
 
             listView.setAdapter(itemsAdapter);
         }
-
     }
 }

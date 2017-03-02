@@ -12,8 +12,10 @@
         tools:context="com.ntkduy1604.airflitedevicemanager.CategoryNfcReader">
 
         <TextView
+            android:id="@+id/nfc_on_off_status"
             style="@style/HeaderText"
-            android:text="@string/intro_message" />
+            android:text="@string/nfc_enable"
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/instruction"
@@ -47,7 +49,6 @@
 
                 <TextView
                     style="@style/DataDisplay"
-                    android:layout_height="50dp"
                     android:text="@string/nfc_scanned_serial_no" />
 
                 <TextView
@@ -59,8 +60,8 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
                 android:background="@android:color/darker_gray" />
 
             <LinearLayout
@@ -88,7 +89,6 @@
                 <TextView
                     android:id="@+id/nfc_scanned_serial_no_tv"
                     style="@style/DataDisplay"
-                    android:layout_height="50dp"
                     android:text="@string/nfc_scanned_serial_no_tv_default" />
 
                 <TextView
@@ -98,35 +98,53 @@
 
             </LinearLayout>
         </LinearLayout>
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
+            android:layout_height="88dp"
+            android:orientation="horizontal"
+            android:gravity="center">
 
-            <TextView
-                android:id="@+id/nfc_on_off_status"
-                android:layout_width="wrap_content"
+            <Button
+                android:layout_width="80dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:text="@string/nfc_enable"
-                android:textSize="28sp" />
+                android:clickable="false"
+                android:text="ADD"/>
 
-            <TextView
-                android:id="@+id/contact_detail"
-                android:layout_width="wrap_content"
+            <Button
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="@string/contact_detail"
-                android:textSize="14sp" />
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:text="COMMIT"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
+            <Button
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/icon" />
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:text="EDIT"/>
 
-        </RelativeLayout>
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:text="DELETE"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/contact_detail"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:text="@string/contact_detail"
+            android:textSize="14sp" />
     </LinearLayout>
 </ScrollView>

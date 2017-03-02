@@ -15,14 +15,9 @@ import static android.R.attr.type;
 public class NfcParser {
     private Tag tag;
 
-    public NfcParser(Parcelable parcelable){
-        tag = (Tag) parcelable;
-    }
+    public NfcParser(Parcelable parcelable){ tag = (Tag) parcelable; }
 
-    public String getNfcTagId (){
-        byte[] id       = tag.getId();
-        return getHex(id);
-    }
+    public String getNfcTagId (){ byte[] id       = tag.getId(); return getHex(id); }
 
     public String getNfcTechnology(){
         String[] nfcTech            = tag.getTechList();
@@ -40,12 +35,9 @@ public class NfcParser {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = bytes.length - 1; i >= 0; --i) {
             int b = bytes[i] & 0xff;
-            if (b < 0x10)
-                stringBuilder.append('0');
+            if (b < 0x10) stringBuilder.append('0');
             stringBuilder.append(Integer.toHexString(b));
-            if (i > 0) {
-                stringBuilder.append(" ");
-            }
+            if (i > 0) stringBuilder.append(" ");
         }
         return stringBuilder.toString();
     }

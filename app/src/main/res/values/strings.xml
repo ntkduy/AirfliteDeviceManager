@@ -33,11 +33,11 @@
     <string name="nfc_scanned_serial_no">   Device Serial:</string>
     <string name="nfc_scanned_active_date"> Active Date:</string>
 
-    <string name="nfc_scanned_tag_id_tv_default">       0 </string>
-    <string name="nfc_scanned_name_tv_default">         0 </string>
-    <string name="nfc_scanned_model_tv_default">        0 </string>
-    <string name="nfc_scanned_serial_no_tv_default">    0 </string>
-    <string name="nfc_scanned_activate_date_tv_default">0 </string>
+    <string name="nfc_scanned_tag_id_tv_default">       unknown </string>
+    <string name="nfc_scanned_name_tv_default">         unknown </string>
+    <string name="nfc_scanned_model_tv_default">        unknown </string>
+    <string name="nfc_scanned_serial_no_tv_default">    unknown </string>
+    <string name="nfc_scanned_activate_date_tv_default">unknown </string>
 
 
 </resources>
