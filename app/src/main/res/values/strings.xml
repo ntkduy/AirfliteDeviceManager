@@ -18,7 +18,6 @@
 
 
     <!-- NFC Strings -->
-    <string name="intro_message">   This is a simple app to read NFC data</string>
     <string name="instruction">     Please put your RFID, NFC cards to start</string>
     <string name="contact_detail">  q.phung@ecu.edu.au</string>
 
@@ -32,12 +31,5 @@
     <string name="nfc_scanned_model">       Device Model:</string>
     <string name="nfc_scanned_serial_no">   Device Serial:</string>
     <string name="nfc_scanned_active_date"> Active Date:</string>
-
-    <string name="nfc_scanned_tag_id_tv_default">       unknown </string>
-    <string name="nfc_scanned_name_tv_default">         unknown </string>
-    <string name="nfc_scanned_model_tv_default">        unknown </string>
-    <string name="nfc_scanned_serial_no_tv_default">    unknown </string>
-    <string name="nfc_scanned_activate_date_tv_default">unknown </string>
-
 
 </resources>

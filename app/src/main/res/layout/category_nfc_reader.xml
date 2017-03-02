@@ -64,39 +64,16 @@
                 android:layout_marginRight="6dp"
                 android:background="@android:color/darker_gray" />
 
-            <LinearLayout
+            <ListView
+                android:id="@+id/single_device_view"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:fadingEdge="vertical"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/nfc_scanned_tag_id_tv"
-                    style="@style/DataDisplay"
-                    android:text="@string/nfc_scanned_tag_id_tv_default" />
 
-                <TextView
-                    android:id="@+id/nfc_scanned_name_tv"
-                    style="@style/DataDisplay"
-                    android:text="@string/nfc_scanned_name_tv_default" />
-
-                <TextView
-                    android:id="@+id/nfc_scanned_model_tv"
-                    style="@style/DataDisplay"
-                    android:text="@string/nfc_scanned_model_tv_default" />
-
-                <TextView
-                    android:id="@+id/nfc_scanned_serial_no_tv"
-                    style="@style/DataDisplay"
-                    android:text="@string/nfc_scanned_serial_no_tv_default" />
-
-                <TextView
-                    android:id="@+id/nfc_scaned_activate_date_tv"
-                    style="@style/DataDisplay"
-                    android:text="@string/nfc_scanned_activate_date_tv_default" />
-
-            </LinearLayout>
+            </ListView>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -105,12 +82,12 @@
             android:gravity="center">
 
             <Button
+                android:id="@+id/content_device_add_new"
                 android:layout_width="80dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:clickable="false"
                 android:text="ADD"/>
 
             <Button

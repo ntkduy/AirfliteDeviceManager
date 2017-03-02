@@ -21,12 +21,14 @@
         <activity
             android:name=".CategoryDeviceList"
             android:label="@string/category_list_of_device" />
-        <activity android:name=".CategoryNfcReader">
+        <activity
+            android:name=".CategoryNfcReader"
+            android:label="@string/category_scan_nfc">
             <intent-filter>
-                <action android:name="android.nfc.action.TAG_DISCOVERED"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

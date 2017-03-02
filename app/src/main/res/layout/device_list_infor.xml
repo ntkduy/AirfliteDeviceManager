@@ -45,6 +45,15 @@
                 android:textColor="@android:color/black" />
 
             <TextView
+                android:id="@+id/model_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_vertical|right"
+                android:text="@string/device_model"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/black" />
+
+            <TextView
                 android:id="@+id/serialno_view"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -120,6 +129,14 @@
 
             <TextView
                 android:id="@+id/name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/model_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:gravity="center_vertical"

@@ -15,61 +15,62 @@ public class Device {
     private static final int NO_IMAGE_PROVIDED = -1;
 
     // Default translation for the word
-    private String mId, mName, mSerialno, mActivedate;
-//    private String mModel, mTagid, mUserid, mComid;     //Scalable data
+    private String mId, mName, mModel, mSerialno, mActivedate, mTagid;
+//    private String mModel,  mUserid, mComid;     //Scalable data
     // Miwok icon imaging
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
-    // Constructor without image
+    // Constructor
     public Device(String vId,
                   String vName,
+                  String vModel,
                   String vSerialno,
-//                String vUserid,
-//                String vComid,
-//                String vModel,
-//                String vTagid,
                   String vActivedate
                 ) {
         mId = vId;
         mName = vName;
+        mModel = vModel;
         mSerialno = vSerialno;
         mActivedate = vActivedate;
-//        mUserid = vUserid;
-//        mComid = vComid;
-//        mModel = vModel;
-//        mTagid = vTagid;
+    }
+
+    public Device(String vId,
+                  String vName,
+                  String vModel,
+                  String vSerialno,
+                  String vTagid,
+                  String vActivedate
+    ) {
+        mId = vId;
+        mName = vName;
+        mModel = vModel;
+        mSerialno = vSerialno;
+        mActivedate = vActivedate;
+        mTagid = vTagid;
     }
 
     // Constructor with image
     public Device(String vId,
                   String vName,
+                  String vModel,
                   String vSerialno,
                   String vActivedate,
-//                String vUserid,
-//                String vComid,
-//                String vModel,
-//                String vTagid,
                   int imageResourceId
                 ) {
         mId = vId;
         mName = vName;
+        mModel = vModel;
         mSerialno = vSerialno;
         mActivedate = vActivedate;
-//        mUserid = vUserid;
-//        mComid = vComid;
-//        mModel = vModel;
-//        mTagid = vTagid;
         mImageResourceId = imageResourceId;
     }
 
     public String getId()           {        return mId;                    }
     public String getName()         {        return mName;                  }
+    public String getModel()        {        return mModel;                 }
     public String getSerialno()     {        return mSerialno;              }
     public String getActivedate()   {        return mActivedate;            }
-//    public String getUserid()       {        return mUserid;                }
-//    public String getComid()        {        return mComid;                 }
-//    public String getModel()        {        return mModel;                 }
-//    public String getTagid()        {        return mTagid;                 }
+    public String getTagid()        {        return mTagid;                 }
 
     // Get the image resource ID
     public int getImageResourceId() {

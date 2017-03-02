@@ -27,9 +27,7 @@ public class JsonParser {
     private HttpURLConnection conn;
     private StringBuilder result;
 
-    public JSONArray makeGetHttpRequest(String vUrl) {
-        JSONArray jsonArray = null;
-
+    public String makeGetHttpRequest(String vUrl) {
         try {
             urlObj = new URL(vUrl);
             conn = (HttpURLConnection) urlObj.openConnection();
@@ -38,6 +36,7 @@ public class JsonParser {
             conn.setRequestProperty("Accept-Charset", charset);
             conn.setConnectTimeout(15000);
             conn.connect();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,9 +49,7 @@ public class JsonParser {
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
             result = new StringBuilder();
             String line;
-            while ((line = reader.readLine()) != null) {
-                result.append(line);
-            }
+            while ((line = reader.readLine()) != null) result.append(line);
 //            Log.e("JSON Parser", "result: " + result.toString());             // Debugger
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,20 +58,11 @@ public class JsonParser {
         // Close the connection
         conn.disconnect();
 
-        /**
-         * Return the retrieved data as an Array Object
-         */
-        try {
-            jsonArray = new JSONArray(result.toString());
-        } catch (JSONException e) {
-            Log.e("JSON Parser", "Error parsing data " + e.toString());
-        }
         // return JSON Array
-        return jsonArray;
+        return result.toString();
     }
 
-    public JSONObject makePostHttpRequest(String vUrl, JSONObject jsonObject) {
-        JSONObject jsonObject1 = null;
+    public String makePostHttpRequest(String vUrl, JSONObject jsonObject) {
         DataOutputStream dataOutputStream;
         String paramsString;
 
@@ -118,19 +106,11 @@ public class JsonParser {
         // Close the connection
         conn.disconnect();
 
-        // try parse the string to a JSON object
-        try {
-            jsonObject1 = new JSONObject(result.toString());
-        } catch (JSONException e) {
-            Log.e("JSON Parser", "Error parsing data " + e.toString());
-        }
-
         // return JSON Object
-        return jsonObject1;
+        return result.toString();
     }
 
-    public JSONObject makePutHttpRequest(String vUrl, JSONObject jsonObject) {
-        JSONObject jsonObject1 = null;
+    public String makePutHttpRequest(String vUrl, JSONObject jsonObject) {
         DataOutputStream dataOutputStream;
         String paramsString;
 
@@ -174,15 +154,8 @@ public class JsonParser {
         // Close the connection
         conn.disconnect();
 
-        // try parse the string to a JSON object
-        try {
-            jsonObject1 = new JSONObject(result.toString());
-        } catch (JSONException e) {
-            Log.e("JSON Parser", "Error parsing data " + e.toString());
-        }
-
         // return JSON Object
-        return jsonObject1;
+        return result.toString();
     }
 
     public void makeDeleteHttpRequest(String vUrl) {

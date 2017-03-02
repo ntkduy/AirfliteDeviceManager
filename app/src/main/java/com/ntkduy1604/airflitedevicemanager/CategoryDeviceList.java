@@ -7,6 +7,7 @@ import android.util.Log;
 import android.widget.ListView;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ public class CategoryDeviceList extends AppCompatActivity {
     }
 
     private class getDeviceList extends AsyncTask<Void, Void, Void> {
-        String mId, mName, mSerialno, mActivedate;
+        String mId, mName, mModel, mSerialno, mActivedate;
 
         JsonParser jsonParser = new JsonParser();
 
@@ -44,24 +45,29 @@ public class CategoryDeviceList extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... arg0) {
             String temp;
+
+
             try {
                 Log.d("request", "starting");
 
-                JSONArray jsonArray = jsonParser.makeGetHttpRequest(LOGIN_URL);
+                String jsonString = jsonParser.makeGetHttpRequest(LOGIN_URL);
+                JSONArray jsonArray;
+                jsonArray = new JSONArray(jsonString);
 
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
                     temp = jsonObject.getString("id"); mId = temp;
                     temp = jsonObject.getString("name"); mName = temp;
+                    temp = jsonObject.getString("model"); mModel = temp;
                     temp = jsonObject.getString("serialno"); mSerialno = temp;
                     temp = jsonObject.getString("activedate"); mActivedate = temp;
 //                        temp = jsonObject.getString("userid");         mUserid = temp;
 //                        temp = jsonObject.getString("comid");           mComid = temp;
-//                        temp = jsonObject.getString("model");           mModel = temp;
+
 //                        temp = jsonObject.getString("tagid");           mTagid = temp;
 
-                    devices.add(new Device(mId, mName, mSerialno, mActivedate,
-//                                mUserid, mComid,  mModel, mTagid,
+                    devices.add(new Device(mId, mName, mModel, mSerialno, mActivedate,
+//                                mUserid, mComid,   mTagid,
                             R.mipmap.ic_launcher));
                     itemsAdapter = new DeviceAdapter(CategoryDeviceList.this, devices, R.color.category_device_list);
                 }

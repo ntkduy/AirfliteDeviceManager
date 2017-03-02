@@ -36,7 +36,7 @@ public class DeviceAdapter extends ArrayAdapter<Device> {
         View listItemView = convertView;
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item, parent, false);
+                    R.layout.device_list_infor, parent, false);
         }
 
         // Get the {@link Device} object located at this position in the list
@@ -48,25 +48,16 @@ public class DeviceAdapter extends ArrayAdapter<Device> {
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.name_text_view);
         nameTextView.setText(currentDevice.getName());
 
+        TextView modelTextView = (TextView) listItemView.findViewById(R.id.model_text_view);
+        modelTextView.setText(currentDevice.getModel());
+
         TextView serialnoTextView = (TextView) listItemView.findViewById(R.id.serial_no_text_view);
         serialnoTextView.setText(currentDevice.getSerialno());
 
         TextView activatedateTextView = (TextView) listItemView.findViewById(R.id.active_date_text_view);
         activatedateTextView.setText(currentDevice.getActivedate());
 
-//        TextView useridTextView = (TextView) listItemView.findViewById(R.id.user_id_text_view);
-//        useridTextView.setText(currentDevice.getUserid());
-//
-//        TextView comidTextView = (TextView) listItemView.findViewById(R.id.com_id_text_view);
-//        comidTextView.setText(currentDevice.getComid());
-//
-//        TextView modelTextView = (TextView) listItemView.findViewById(R.id.model_text_view);
-//        modelTextView.setText(currentDevice.getModel());
-//
-//        TextView tagidTextView = (TextView) listItemView.findViewById(R.id.tagid_text_view);
-//        tagidTextView.setText(currentDevice.getTagid());
-
-        // Find the ImageView in the list_item.xml layout with the ID image.
+        // Find the ImageView in the device_list_infor.xmlnfor.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image_view);
         // Check if an image is provided for this word or not
         if (currentDevice.hasImage()) {
