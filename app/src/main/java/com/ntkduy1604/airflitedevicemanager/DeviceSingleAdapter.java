@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -40,17 +41,47 @@ public class DeviceSingleAdapter extends ArrayAdapter<Device> {
         TextView tagIdTextView = (TextView) listItemView.findViewById(R.id.nfc_scanned_tag_id_tv);
         tagIdTextView.setText(currentDevice.getTagid());
 
-        TextView nameTextView = (TextView) listItemView.findViewById(R.id.nfc_scanned_name_tv);
+        final TextView nameTextView = (TextView) listItemView.findViewById(R.id.nfc_scanned_name_tv);
+        final EditText nameEditText = (EditText) listItemView.findViewById(R.id.nfc_scanned_name_et);
         nameTextView.setText(currentDevice.getName());
 
-        TextView modelTextView = (TextView) listItemView.findViewById(R.id.nfc_scanned_model_tv);
+        final TextView modelTextView = (TextView) listItemView.findViewById(R.id.nfc_scanned_model_tv);
+        final EditText modelEditText = (EditText) listItemView.findViewById(R.id.nfc_scanned_model_et);
         modelTextView.setText(currentDevice.getModel());
 
-        TextView serialnoTextView = (TextView) listItemView.findViewById(R.id.nfc_scanned_serial_no_tv);
+        final TextView serialnoTextView = (TextView) listItemView.findViewById(R.id.nfc_scanned_serial_no_tv);
+        final EditText serialEditText = (EditText) listItemView.findViewById(R.id.nfc_scanned_serial_no_et);
         serialnoTextView.setText(currentDevice.getSerialno());
 
-        TextView activatedateTextView = (TextView) listItemView.findViewById(R.id.nfc_scaned_activate_date_tv);
-        activatedateTextView.setText(currentDevice.getActivedate());
+        TextView activedateTextView = (TextView) listItemView.findViewById(R.id.nfc_scaned_activate_date_tv);
+        activedateTextView.setText(currentDevice.getActivedate());
+
+        nameTextView.setOnClickListener(new View.OnClickListener(){
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                nameTextView.setVisibility(View.GONE);
+                nameEditText.setVisibility(View.VISIBLE); //or switcher.showPrevious();
+            }
+        });
+
+        modelTextView.setOnClickListener(new View.OnClickListener(){
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                modelTextView.setVisibility(View.GONE);
+                modelEditText.setVisibility(View.VISIBLE); //or switcher.showPrevious();
+            }
+        });
+
+        serialnoTextView.setOnClickListener(new View.OnClickListener(){
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                serialnoTextView.setVisibility(View.GONE);
+                serialEditText.setVisibility(View.VISIBLE); //or switcher.showPrevious();
+            }
+        });
 
         return listItemView;
     }

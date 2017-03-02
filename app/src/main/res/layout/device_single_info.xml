@@ -8,17 +8,52 @@
         android:id="@+id/nfc_scanned_tag_id_tv"
         style="@style/DataDisplay" />
 
-    <TextView
-        android:id="@+id/nfc_scanned_name_tv"
-        style="@style/DataDisplay" />
+    <ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/my_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/nfc_scanned_model_tv"
-        style="@style/DataDisplay" />
+        <TextView
+            android:id="@+id/nfc_scanned_name_tv"
+            style="@style/DataDisplay" />
 
-    <TextView
-        android:id="@+id/nfc_scanned_serial_no_tv"
-        style="@style/DataDisplay" />
+        <EditText
+            android:id="@+id/nfc_scanned_name_et"
+            android:hint="@string/button_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ViewSwitcher>
+
+
+    <ViewSwitcher
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nfc_scanned_model_tv"
+            style="@style/DataDisplay" />
+
+        <EditText
+            android:id="@+id/nfc_scanned_model_et"
+            android:hint="@string/button_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ViewSwitcher>
+
+    <ViewSwitcher
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nfc_scanned_serial_no_tv"
+            style="@style/DataDisplay" />
+
+        <EditText
+            android:id="@+id/nfc_scanned_serial_no_et"
+            android:hint="@string/button_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ViewSwitcher>
 
     <TextView
         android:id="@+id/nfc_scaned_activate_date_tv"

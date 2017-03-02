@@ -7,7 +7,6 @@ import android.util.Log;
 import android.widget.ListView;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class CategoryDeviceList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.category_device_list);
 
-        devices = new ArrayList<Device>();
+        devices = new ArrayList<>();
         listView = (ListView) findViewById(R.id.activity_device_list);
         itemsAdapter = new DeviceAdapter(CategoryDeviceList.this, devices, R.color.category_device_list);
 
@@ -61,10 +60,6 @@ public class CategoryDeviceList extends AppCompatActivity {
                     temp = jsonObject.getString("model"); mModel = temp;
                     temp = jsonObject.getString("serialno"); mSerialno = temp;
                     temp = jsonObject.getString("activedate"); mActivedate = temp;
-//                        temp = jsonObject.getString("userid");         mUserid = temp;
-//                        temp = jsonObject.getString("comid");           mComid = temp;
-
-//                        temp = jsonObject.getString("tagid");           mTagid = temp;
 
                     devices.add(new Device(mId, mName, mModel, mSerialno, mActivedate,
 //                                mUserid, mComid,   mTagid,

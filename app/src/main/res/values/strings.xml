@@ -32,4 +32,11 @@
     <string name="nfc_scanned_serial_no">   Device Serial:</string>
     <string name="nfc_scanned_active_date"> Active Date:</string>
 
+    <string name="button_function_add">ADD</string>
+    <string name="button_function_commit">COMMIT</string>
+    <string name="button_function_edit">EDIT</string>
+    <string name="button_function_delete">DELETE</string>
+
+    <string name="button_hint">type in please</string>
+
 </resources>
